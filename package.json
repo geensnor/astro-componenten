@@ -1,6 +1,6 @@
 {
   "name": "@geensnor/astro-componenten",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Paar prachtige Astro componenten in Geensnor stijl",
   "type": "module",
   "exports": {
@@ -13,7 +13,8 @@
   "files": [
     "index.ts",
     "src/*",
-    "assets/*"
+    "assets/*",
+    "fonts/*"
   ],
   "keywords": [
     "astro-component",
