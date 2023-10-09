@@ -1,0 +1,40 @@
+---
+type Props = {
+  titel: string;
+  subtekst?: string;
+};
+
+const { titel, subtekst } = Astro.props as Props;
+---
+
+<style>
+  /* roboto-slab-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/roboto-slab-v33-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  h1,
+  p {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.3em;
+  }
+
+  h1 {
+    color: rgb(234 88 12);
+    font-size: 4em;
+    margin-bottom: 0;
+  }
+
+  div {
+    margin: 10px;
+    text-align: center;
+  }
+</style>
+<div>
+  <h1>{titel}</h1>
+  <p>{subtekst}</p>
+</div>

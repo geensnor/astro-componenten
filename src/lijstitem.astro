@@ -1,0 +1,30 @@
+---
+type Props = {
+  inhoud: string;
+};
+const { inhoud } = Astro.props as Props;
+---
+
+<style>
+  /* work-sans-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/work-sans-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  li {
+    font-family: "Work Sans", sans;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0 0 0 35px;
+    list-style: none;
+    background-image: url("../assets/de-snor.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 27px;
+  }
+</style>
+<li>{inhoud}</li>
