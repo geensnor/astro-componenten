@@ -1,10 +1,9 @@
 ---
 type Props = {
-  titel: string;
   Type: string;
 };
 
-const { titel, Type } = Astro.props as Props;
+const { Type } = Astro.props as Props;
 ---
 
 <style>
@@ -49,4 +48,8 @@ const { titel, Type } = Astro.props as Props;
     text-decoration: none;
   }
 </style>
-<Type><span>{titel}</span></Type>
+<Type>
+  <span>
+    <slot />
+  </span>
+</Type>

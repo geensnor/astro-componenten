@@ -1,8 +1,5 @@
 ---
-type Props = {
-  inhoud: string;
-};
-const { inhoud } = Astro.props as Props;
+
 ---
 
 <style>
@@ -27,4 +24,4 @@ const { inhoud } = Astro.props as Props;
     background-size: 27px;
   }
 </style>
-<li>{inhoud}</li>
+<li><slot /></li>
