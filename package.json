@@ -1,6 +1,6 @@
 {
   "name": "@geensnor/astro-componenten",
-  "version": "1.0.2",
+  "version": "2.0.2",
   "description": "Paar prachtige Astro componenten in Geensnor stijl",
   "homepage": "https://github.com/geensnor/astro-componenten#readme",
   "type": "module",
@@ -9,7 +9,8 @@
     "./de-snor": "./src/de-snor.astro",
     "./kop": "./src/kop.astro",
     "./knoepert": "./src/knoepert.astro",
-    "./lijstitem": "./src/lijstitem.astro"
+    "./lijstitem": "./src/lijstitem.astro",
+    "./tegel": "./src/tegel.astro"
   },
   "files": [
     "index.ts",
@@ -22,7 +23,7 @@
     "geensnor"
   ],
   "scripts": {
-    "format": "prettier -w src/*",
+    "format": "npx prettier -w src/*",
     "lint": "eslint --ext .ts,.js,.astro src/*"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
     "eslint": "^8.50.0",
     "eslint-plugin-astro": "^0.29.1",
     "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0"
+    "prettier-plugin-astro": "^0.12.0",
+    "typescript": "^5.2.2"
   }
 }
