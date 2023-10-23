@@ -10,7 +10,8 @@
     "./kop": "./src/kop.astro",
     "./knoepert": "./src/knoepert.astro",
     "./lijstitem": "./src/lijstitem.astro",
-    "./tegel": "./src/tegel.astro"
+    "./tegel": "./src/tegel.astro",
+    "./voettekst": "./src/voettekst.astro"
   },
   "files": [
     "index.ts",
