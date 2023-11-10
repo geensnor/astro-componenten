@@ -1,10 +1,18 @@
 ---
-type Props = {
-  Type: string;
-};
+import type { HTMLAttributes } from "astro/types";
 
-const { Type } = Astro.props as Props;
+interface Props extends HTMLAttributes<"h1"> {
+  Type: "h1" | "h2" | "h3" | "h4" | "h5";
+}
+
+const { Type = "h1", ...rest } = Astro.props as Props;
 ---
+
+<Type {...rest}>
+  <span>
+    <slot />
+  </span>
+</Type>
 
 <style>
   /* roboto-slab-regular - latin */
@@ -48,8 +56,3 @@ const { Type } = Astro.props as Props;
     text-decoration: none;
   }
 </style>
-<Type>
-  <span>
-    <slot />
-  </span>
-</Type>

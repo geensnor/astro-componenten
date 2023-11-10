@@ -1,10 +1,19 @@
 ---
-type Props = {
-  subtekst?: string;
-};
+import type { HTMLAttributes } from "astro/types";
 
-const { subtekst } = Astro.props as Props;
+interface Props extends HTMLAttributes<"div"> {
+  subtekst?: string;
+}
+
+const { subtekst, ...rest } = Astro.props as Props;
 ---
+
+<div {...rest}>
+  <h1>
+    <slot />
+  </h1>
+  <p>{subtekst}</p>
+</div>
 
 <style>
   /* roboto-slab-regular - latin */
@@ -33,9 +42,3 @@ const { subtekst } = Astro.props as Props;
     text-align: center;
   }
 </style>
-<div>
-  <h1>
-    <slot />
-  </h1>
-  <p>{subtekst}</p>
-</div>

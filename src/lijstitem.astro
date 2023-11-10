@@ -1,3 +1,13 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"li"> {}
+
+const { ...rest } = Astro.props as Props;
+---
+
+<li {...rest}><slot /></li>
+
 <style>
   /* work-sans-regular - latin */
   @font-face {
@@ -20,4 +30,3 @@
     background-size: 27px;
   }
 </style>
-<li><slot /></li>
