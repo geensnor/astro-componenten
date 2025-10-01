@@ -40,7 +40,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "astro-component-tester": "^0.6.0"
+    "astro-component-tester": "^0.8.0"
   },
   "peerDependencies": {
     "esbuild": "^0.25.9"
