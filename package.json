@@ -1,6 +1,6 @@
 {
   "name": "@geensnor/astro-componenten",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "Paar prachtige Astro componenten in Geensnor stijl",
   "homepage": "https://github.com/geensnor/astro-componenten#readme",
   "type": "module",
@@ -40,7 +40,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "astro-component-tester": "^0.8.0"
+    "astro-component-tester": "^0.6.0"
   },
   "peerDependencies": {
     "esbuild": "^0.25.9"
