@@ -1,23 +1,21 @@
-import { expect } from "chai";
-import { getComponentOutput } from "astro-component-tester";
+import { experimental_AstroContainer as AstroContainer } from "astro/container";
+import { expect, test } from "vitest";
+import Kop from "../src/kop.astro";
 
-describe("Kop test", () => {
-  // Simple test to get us started with the syntax
+const container = await AstroContainer.create();
+const result = await container.renderToString(Kop, {
+  slots: {
+    default: "Kop content",
+  },
+  props: {
+    Type: "h3",
+  },
+});
 
-  // This show us how to write a test for our component's output using astro-component-tester
-  describe("H2 wordt getoond", async () => {
-    let component;
+test("Rendert content in default slot", async () => {
+  expect(result).toContain("Kop content");
+});
 
-    // First get the component's output, this returns an object containing the generated html (`.html`)
-    before(async () => {
-      component = await getComponentOutput("./src/kop.astro", {
-        Type: "h2",
-      });
-    });
-
-    // Unless you modified /src/Component.astro, this should pass, as the component is empty apart from the frontmatter and new lines
-    it("Kop is een H2", () => {
-      expect(component.html).to.include("<h2");
-    });
-  });
+test("Is een h3 als je dat graag wilt", async () => {
+  expect(result).toContain("<h3");
 });

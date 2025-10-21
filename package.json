@@ -1,6 +1,6 @@
 {
   "name": "@geensnor/astro-componenten",
-  "version": "2.1.3",
+  "version": "2.1.8",
   "description": "Paar prachtige Astro componenten in Geensnor stijl",
   "homepage": "https://github.com/geensnor/astro-componenten#readme",
   "type": "module",
@@ -24,22 +24,26 @@
     "geensnor"
   ],
   "scripts": {
-    "test": "mocha --parallel --timeout 15000",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
     "format": "npx prettier -w src/*",
     "lint": "eslint --ext .ts,.js,.astro src/*"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
-    "chai": "^4.3.10",
+    "@vitest/ui": "^3.2.4",
     "eslint": "^8.50.0",
     "eslint-plugin-astro": "^0.29.1",
-    "mocha": "^10.2.0",
-    "prettier": "^3.0.3",
+    "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.12.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
-    "astro-component-tester": "^0.8.0"
+    "astro": "^5.14.1"
+  },
+  "peerDependencies": {
+    "esbuild": "^0.25.9"
   }
 }
