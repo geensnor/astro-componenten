@@ -1,0 +1,42 @@
+---
+import {
+  Desnor,
+  Knoepert,
+  Kop,
+  Tegel,
+  Voettekst,
+  Lijstitem,
+} from "../../index.ts";
+
+import "@fontsource-variable/work-sans";
+import "@fontsource/zilla-slab/500.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Geensnor voorbeelden</title>
+  </head>
+  <body>
+    <main>
+      <Kop Type="h1">H1 Heading</Kop>
+      <p>Stuk tekst onder de H1 heading</p>
+      <Kop Type="h2">H2 Heading</Kop>
+      <Kop Type="h3">H3 Heading</Kop>
+      <Kop Type="h4">H4 Heading</Kop>
+      <Kop Type="h5">H5 Heading</Kop>
+      <Knoepert subtekst="Subtekst van de knoepert">Knoepert</Knoepert>
+      <Tegel>Dit is de inhoud van de tegel component.</Tegel>
+      <ul>
+        <Lijstitem>Dit is een lijstitem</Lijstitem>
+        <Lijstitem>Dit is nog een lijstitem</Lijstitem>
+        <Lijstitem>En nog een lijstitem</Lijstitem>
+      </ul>
+      <Desnor />
+      <Voettekst githubURL="https://www.github.com/geensnor" />
+    </main>
+  </body>
+</html>

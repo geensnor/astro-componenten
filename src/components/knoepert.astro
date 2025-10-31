@@ -1,0 +1,36 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import "../../node_modules/@geensnor/tokens/tokens.css";
+
+interface Props extends HTMLAttributes<"div"> {
+  subtekst?: string;
+}
+
+const { subtekst, ...rest } = Astro.props as Props;
+---
+
+<div {...rest}>
+  <h1>
+    <slot />
+  </h1>
+  <p>{subtekst}</p>
+</div>
+
+<style>
+  h1,
+  p {
+    font-family: var(--geensnor-font-family-headings);
+    font-size: var(--geensnor-font-size-l);
+  }
+
+  h1 {
+    color: var(--geensnor-oranje-100);
+    font-size: var(--geensnor-font-size-5xl);
+    margin-bottom: 0;
+  }
+
+  div {
+    margin: 10px;
+    text-align: center;
+  }
+</style>

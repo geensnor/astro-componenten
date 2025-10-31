@@ -1,0 +1,24 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"li"> {}
+
+const { ...rest } = Astro.props as Props;
+---
+
+<li {...rest}><slot /></li>
+
+<style>
+  li {
+    font-family: var(--geensnor-font-family);
+    font-size: var(--geensnor-font-size-m);
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0 0 0 35px;
+    list-style: none;
+    background-image: url("../assets/de-snor.svg");
+    background-repeat: no-repeat;
+    background-position: left 4px;
+    background-size: 27px;
+  }
+</style>

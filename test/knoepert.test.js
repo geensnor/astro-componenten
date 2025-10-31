@@ -1,6 +1,6 @@
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { expect, test } from "vitest";
-import Kop from "../src/knoepert.astro";
+import Kop from "../src/components/knoepert.astro";
 
 const container = await AstroContainer.create();
 const result = await container.renderToString(Kop, {

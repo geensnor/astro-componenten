@@ -1,0 +1,70 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import "../../node_modules/@geensnor/tokens/tokens.css";
+
+interface Props extends HTMLAttributes<"h1"> {
+  Type: "h1" | "h2" | "h3" | "h4" | "h5";
+}
+
+const { Type = "h1", ...rest } = Astro.props as Props;
+---
+
+<Type {...rest}>
+  <span>
+    <slot />
+  </span>
+</Type>
+
+<style>
+  h1 {
+    font-size: var(--geensnor-font-size-4xl);
+  }
+  h2 {
+    font-size: var(--geensnor-font-size-3xl);
+  }
+  h3 {
+    font-size: var(--geensnor-font-size-2xl);
+  }
+  h4 {
+    font-size: var(--geensnor-font-size-xl);
+  }
+  h5 {
+    font-size: var(--geensnor-font-size-l);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--geensnor-font-family-headings);
+    font-weight: var(--geensnor-font-weight-bold);
+  }
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--geensnor-oranje-100);
+  }
+
+  h1 > a > span,
+  h1 > span {
+    background-color: var(--geensnor-zwartisch);
+    padding: 0.5rem;
+    color: #fff;
+    line-height: var(--geensnor-line-height);
+  }
+
+  h1 > a:hover {
+    text-decoration: none;
+  }
+
+  @media (max-width: 720px) {
+    h1 {
+      font-size: var(--geensnor-font-size-xl);
+    }
+    h2 {
+      font-size: var(--geensnor-font-size-l);
+    }
+  }
+</style>

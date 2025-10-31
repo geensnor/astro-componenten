@@ -1,0 +1,26 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import "@fontsource-variable/work-sans";
+
+interface Props extends HTMLAttributes<"div"> {}
+
+const { ...rest } = Astro.props as Props;
+---
+
+<div {...rest}>
+  <slot />
+</div>
+
+<style>
+  div {
+    font-family: var(--geensnor-font-family);
+    font-size: var(--geensnor-font-size-m);
+    padding: 10px;
+    background-color: rgb(248, 250, 252);
+    border-color: var(--geensnor-grijs-50);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: var(--geensnor-border-radius);
+    box-shadow: var(--geensnor-box-shadow);
+  }
+</style>

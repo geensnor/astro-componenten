@@ -6,12 +6,12 @@
   "type": "module",
   "exports": {
     ".": "./index.js",
-    "./de-snor": "./src/de-snor.astro",
-    "./kop": "./src/kop.astro",
-    "./knoepert": "./src/knoepert.astro",
-    "./lijstitem": "./src/lijstitem.astro",
-    "./tegel": "./src/tegel.astro",
-    "./voettekst": "./src/voettekst.astro"
+    "./de-snor": "./src/components/de-snor.astro",
+    "./kop": "./src/components/kop.astro",
+    "./knoepert": "./src/components/knoepert.astro",
+    "./lijstitem": "./src/components/lijstitem.astro",
+    "./tegel": "./src/components/tegel.astro",
+    "./voettekst": "./src/components/voettekst.astro"
   },
   "files": [
     "index.ts",
@@ -27,21 +27,28 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "format": "npx prettier -w src/*",
-    "lint": "eslint --ext .ts,.js,.astro src/*"
+    "lint": "eslint --ext .ts,.js,.astro src/*",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "@typescript-eslint/parser": "^6.7.4",
+    "@eslint/js": "^9.38.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
     "@vitest/ui": "^3.2.4",
-    "eslint": "^8.50.0",
-    "eslint-plugin-astro": "^0.29.1",
+    "astro-eslint-parser": "^1.2.2",
+    "eslint": "^9.38.0",
+    "eslint-plugin-astro": "^1.4.0",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.12.0",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "astro": "^5.14.1"
+    "@fontsource-variable/work-sans": "^5.2.8",
+    "@fontsource/zilla-slab": "^5.2.8",
+    "astro": "^5.15.2"
   },
   "peerDependencies": {
     "esbuild": "^0.25.9"

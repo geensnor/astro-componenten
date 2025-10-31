@@ -1,6 +1,6 @@
-export { default as Desnor } from "./src/desnor.astro";
-export { default as Knoepert } from "./src/knoepert.astro";
-export { default as Kop } from "./src/kop.astro";
-export { default as Lijstitem } from "./src/lijstitem.astro";
-export { default as Tegel } from "./src/tegel.astro";
-export { default as Voettekst } from "./src/voettekst.astro";
+export { default as Desnor } from "./src/components/desnor.astro";
+export { default as Knoepert } from "./src/components/knoepert.astro";
+export { default as Kop } from "./src/components/kop.astro";
+export { default as Lijstitem } from "./src/components/lijstitem.astro";
+export { default as Tegel } from "./src/components/tegel.astro";
+export { default as Voettekst } from "./src/components/voettekst.astro";
