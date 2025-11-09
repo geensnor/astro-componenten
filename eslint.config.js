@@ -1,6 +1,7 @@
 import astroPlugin from "eslint-plugin-astro";
 import tsParser from "@typescript-eslint/parser";
 import astroParser from "astro-eslint-parser";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 
 export default [
   // Apply to all files
@@ -30,12 +31,21 @@ export default [
   // Astro files
   {
     files: ["**/*.astro"],
+    plugins: {
+      "jsx-a11y": jsxA11y,
+    },
     languageOptions: {
       parser: astroParser,
       parserOptions: {
         parser: tsParser,
         extraFileExtensions: [".astro"],
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
+    },
+    rules: {
+      ...jsxA11y.configs.strict.rules,
     },
   },
 
