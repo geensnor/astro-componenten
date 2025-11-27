@@ -1,5 +1,7 @@
 ---
 import GitHubLogo from "../../assets/GitHub-Mark-120px-plus.png";
+import "@geensnor/tokens";
+import "@fontsource-variable/work-sans";
 
 type Props = {
   githubURL: string;
@@ -18,18 +20,11 @@ const { githubURL } = Astro.props as Props;
 </footer>
 
 <style>
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Work Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/work-sans-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
   footer {
-    font-family: "Work Sans", sans;
-    background-color: rgb(248, 250, 252);
+    font-family: var(--geensnor-font-family);
+    background-color: var(--geensnor-grijs-10);
 
-    border-top-color: rgb(209, 213, 219);
+    border-top-color: var(--geensnor-grijs-50);
     border-top-style: solid;
     border-top-width: 1px;
 
